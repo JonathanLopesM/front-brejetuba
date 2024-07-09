@@ -30,7 +30,7 @@ export function Presence({ sessionId}) {
   }
 
   function handleCloseVote(e) {
-    console.log(sessionId, voteResParl, resultVote?.Yes, resultVote?.Not, resultVote?.abstain, observation, "", resultVoteForm,   Number(resultVote?.materia), matterComplet.matterId, null, null )
+  
     RegisterVoteSapl(sessionId, voteResParl, resultVote?.Yes, resultVote?.Not, resultVote?.abstain, observation, "", resultVoteForm,   Number(resultVote?.materia), matterComplet.matterId, null, null )
     
     setButtonClose(false)
@@ -56,7 +56,7 @@ export function Presence({ sessionId}) {
     },1000)
   }
   function handleEditPresence(id, presence){
-    console.log(id, presence)
+  
     let precensaBoolean = false
     if(presence === 'Presente') precensaBoolean = true
     PatchPresenceParl(id, precensaBoolean)
@@ -73,7 +73,7 @@ export function Presence({ sessionId}) {
     },1000)
   }
 
-  console.log(voteResParl, 'voteResParl')
+
   return (
         <div className="flex flex-col border p-8 mt-[55px] overflow-auto">
               <div className=" my-2">

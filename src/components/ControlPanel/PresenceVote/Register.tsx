@@ -30,7 +30,7 @@ export function Register({ setMatterState, sessionId, setProjectsView}) {
   }
 
   function handleCloseVote(e) {
-    console.log(sessionId, voteResParl, resultVote?.Yes, resultVote?.Not, resultVote?.abstain, observation, "", resultVoteForm,   Number(resultVote?.materia), matterComplet.matterId, null, null )
+
     RegisterVoteSapl(sessionId, voteResParl, resultVote?.Yes, resultVote?.Not, resultVote?.abstain, observation, "", resultVoteForm,   Number(resultVote?.materia), matterComplet.matterId, null, null )
     
     setButtonClose(false)
@@ -56,7 +56,7 @@ export function Register({ setMatterState, sessionId, setProjectsView}) {
     },1000)
   }
   function handleEditPresence(id, presence){
-    console.log(id, presence)
+
     let precensaBoolean = false
     if(presence === 'Presente') precensaBoolean = true
     PatchPresenceParl(id, precensaBoolean)
@@ -73,7 +73,7 @@ export function Register({ setMatterState, sessionId, setProjectsView}) {
     },1000)
   }
 
-  console.log(voteResParl, 'voteResParl')
+
   return (
     <>
     {

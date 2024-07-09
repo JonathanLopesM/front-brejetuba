@@ -41,8 +41,6 @@ export default function LoginParl() {
     CreateSession(username, password)
   }
 
-  console.log(error, "error no login parl")
-
   return (
     <div className="flex px-10 justify-items-center h-screen ">
       <div className="flex flex-col items-center gap-4 justify-center mx-auto ">

@@ -12,8 +12,6 @@ export default function Login() {
   // @ts-ignore
   const city = import.meta.env.VITE_LOCAL ? import.meta.env.VITE_LOCAL : ''  
 
-  console.log(city)
-
   const history = useNavigate()
   const navigate = useNavigate();
   const token = localStorage.getItem('sessionid')

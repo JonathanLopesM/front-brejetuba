@@ -27,7 +27,6 @@ export function SpeechControl () {
       return parl
     }
   })
-  console.log(parlaActives, 'parlamentares')
 
   function autoSetReload(){
     let user = [{
@@ -43,7 +42,6 @@ export function SpeechControl () {
     
     if(userObj){
       user = parlSpeech.filter(parl => {
-        console.log(parl.id)
         if(parl.id == userObj){
           return parl
         }
@@ -62,10 +60,8 @@ export function SpeechControl () {
   
   const handleSongAlert = () => {
     setSoundPlay(!soundPlay)
-    console.log( soundPlay,"efeito sonoro ligado  ")
     PatchSpeechParl(getIdSpeech, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined , undefined, soundPlay )
   }
-  console.log(userObj, "user obj")
 return (
   <div className="flex flex-col w-full gap-4">
       <div className="flex w-full justify-between items-end border-b-2 pb-8 gap-2">

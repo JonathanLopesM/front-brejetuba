@@ -36,7 +36,6 @@ export function ResultVote({ setMatterState, sessionId, setProjectsView}) {
   }
 
   function handleEncerrar() {
-    console.log(sessionId, voteResParl, resultVote?.Yes, resultVote?.Not, abstentionForm, observation, "", resultVoteForm,   Number(resultVote?.materia), matterComplet.matterId, null, null )
     RegisterVoteSapl(sessionId, voteResParl, resultVote?.Yes, resultVote?.Not, abstentionForm, observation, "", resultVoteForm,   Number(resultVote?.materia), matterComplet.matterId, null, null )
     
     Matters(sessionId)
@@ -53,8 +52,6 @@ export function ResultVote({ setMatterState, sessionId, setProjectsView}) {
       GetVotes()
     },1000)
   }
-
-  console.log(resultVote, "matter complet Id")
 
   return (
     <>

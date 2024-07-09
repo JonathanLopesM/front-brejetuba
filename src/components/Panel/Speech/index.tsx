@@ -8,7 +8,6 @@ import { FinalConsiderationsPanel } from "./FinalConsiderationsPanel";
 import alarme from "../../../assets/EfeitoSonoroCampainha.mp3";
 
 export function SpeechPanel({dados}){
-  console.log(dados?.speechParl?.soundPlay, " daddos para pegar o true do som")
   
   const [audio] = useState(new Audio(alarme))
   useEffect(()=>{

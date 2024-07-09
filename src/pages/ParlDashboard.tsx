@@ -12,18 +12,13 @@ export function ParlDashboard () {
   useEffect(()=>{
     if(!userParl){
       let user = localStorage.getItem("novace@userParl")
-      console.log(user, "user vindo do par")
       user =JSON.parse(user)
       setUserParl(user)
     }
     GetVotePresence()
   },[])
-  console.log(userParl, "parl")
-  console.log(presence, "presence")
-  console.log(dados, "dados dados dados ")
   return (
     <div className="flex  w-full  h-screen mx-auto">
-      
       <div className="flex flex-col w-full ">
         <Header openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} page={page} />
         <div className="w-full max-w-[900px] mx-auto">
@@ -69,7 +64,6 @@ export function ParlDashboard () {
                 </button>
               </div>
             }
-
           </div>
         </div>
       </div>}

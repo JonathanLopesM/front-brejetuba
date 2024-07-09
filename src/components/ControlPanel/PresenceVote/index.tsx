@@ -42,7 +42,7 @@ export function PresenceVoteControl ({sessionId} ){
     matters.sort((a, b) => (a.numero_ordem < b.numero_ordem) ? 1 : -1)
   }
 
-  console.log(matters, "matters teste ")
+
   return (
     <div className="flex flex-col border-2  gap-8 overflow-auto max-h-[630px] relative">
       <div className="flex h-14 gap-4  bg-white border w-full absolute  py-2 px-2">
@@ -121,7 +121,7 @@ export function PresenceVoteControl ({sessionId} ){
                                   ReloadVotePanel()
                                   setMatterState(matter.id);
                                   setMatterComplet(matter);
-                                  console.log(matterState, "matter dentro da funcao ")
+
                                   MatterUpdated(matter.id);
                                 }} 
                                 type="button" 

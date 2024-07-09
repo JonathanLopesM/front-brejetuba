@@ -10,8 +10,6 @@ export function PainelParlamentares ({ dados, materia}) {
     }
 
   },[])
-  console.log(dados, "dados")
-  console.log(matters, "mattersno painel ")
   const partidos = [
     { name: "CRISTINA MAGNO", partido: "PP" },
     { name: "BRUNO OLIVEIRA", partido: "PRTB" },
@@ -39,8 +37,7 @@ export function PainelParlamentares ({ dados, materia}) {
   ];
 
 // Verificar os dados do retorno parar conferir se 
-// visualizar o voto do parl na tela do painel
-console.log(materia, "materia")
+// visualizar o voto do parl na tela do paine
   return (
     <>
      {

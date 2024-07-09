@@ -40,13 +40,11 @@ export function Session () {
     DayOrderIds(id)
     if(panelId){
       return ()=> {
-        console.log("Executou a função de zerar as presenças")
         PresenceReload()
           PatchPanelView(panelId, 0);
       }}
   },[])
 
-  console.log(getIdSpeech, 'getId no session slug')
   const history = useNavigate()
 
   let session = ''

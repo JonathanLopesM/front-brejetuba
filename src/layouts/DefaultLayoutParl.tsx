@@ -15,7 +15,6 @@ export function DefaultLayoutParl () {
       }
     }
   },[])
-console.log()
   return (
     <div className="flex flex-col">
       

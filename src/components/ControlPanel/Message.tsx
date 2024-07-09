@@ -8,7 +8,6 @@ export function MessageControl () {
 
   useEffect(()=>{
     return ()=> {
-      console.log("Executou a função de zerar as presenças")
       setMessage('')
       PatchPanelMessage(tela, message )
     }

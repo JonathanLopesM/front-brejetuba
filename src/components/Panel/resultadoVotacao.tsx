@@ -1,7 +1,6 @@
 import React from "react"
 
 export function ResultadoVotacao({dados, materia}){
-  console.log(dados, "dados resultado de votacao")
   return (
     <div className="flex flex-col w-full justify-center">
       <div className="flex h-14 text-center justify-center items-center ">

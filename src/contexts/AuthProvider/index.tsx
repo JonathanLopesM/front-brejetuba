@@ -271,7 +271,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   // Updated Speech Parl
   async function GetIdSpeech(){
     const response = await getSpeechParlData()
-    console.log(response.data.response[0]._id, 'response no autcontext')
     
      setGetIdSpeech(response.data.response[0]._id)
 
@@ -298,7 +297,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
     await patchVote({id, novoVoto}) 
   }
   async function PatchPresenceParl(id, presence){
-    console.log(id, presence, 'context')
     await patchPresence({id, presence})
   }
   async function PatchPresenceParlMany(presence){
@@ -359,7 +357,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
         observacao, ip, tipo_resultado_votacao, materia, 
         ordem, expediente, user
       })
-      console.log(response, "response do register vote context 350")
 
   }
 

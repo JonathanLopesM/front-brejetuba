@@ -23,11 +23,7 @@ export function Vote ({page, setPage}) {
       }
     }
   },[dados])
-  console.log(dados, "dados painel ")
-  console.log(!!dados?.data?.result, "data dados visualisar ")
   function handleConfirmVote(){
-    console.log("confirm vote")
-    console.log(userParl._id, vote, "voto enviado ")
     ParlVote (userParl._id, vote)
 
     setTimeout(() => {

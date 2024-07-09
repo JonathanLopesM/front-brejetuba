@@ -9,8 +9,6 @@ import { Message } from "../../components/Panel/Message"
 import { SpeechPanel } from "../../components/Panel/Speech/index"
 import { useNavigate } from "react-router-dom"
 
-
-// const socket = io('http://localhost:3333');
 let poolingTimeout;
 async function PoolingToBack (setDados) {
   await getData(setDados)
@@ -19,14 +17,7 @@ async function PoolingToBack (setDados) {
 }
 export function Painel(){
   const { dados, setDados, idSession } = useContext(AuthContext)
-    const navigate = useNavigate()
-  useEffect(()=> {
-    // Conferir se tem um token, 
-
-    // se tiver rediciona para a dashboard 
-    const token = localStorage.getItem('sessionid')
-    
-  }, [idSession])
+  const navigate = useNavigate()
   
   useEffect(()=>{
    PoolingToBack(setDados)
@@ -47,10 +38,8 @@ export function Painel(){
   let result;
   if(dados?.data?.result){
     let array = dados?.data?.result?.__str__.split(" - ")
-    console.log(array[2], "tipo da resposta ")
     result = array[2]
   }
-  console.log(dados?.data, "dados de mater")
 
   return (
 

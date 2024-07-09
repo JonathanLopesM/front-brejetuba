@@ -204,7 +204,6 @@ export const createCloseVote = async ({
   return response
 }
 
-// app.patch("/parl/vote/:user", Voting)
 export const patchVote = async ({id, novoVoto}) => {
   
   let errors= [];
@@ -216,7 +215,6 @@ export const patchVote = async ({id, novoVoto}) => {
 }
 
 export const patchPresence = async ({id, presence}) => {
-  console.log(id, presence, 'api')
   const response = await api.patch(`/parl/presence/${id}`, {
     presence: presence
   })

@@ -16,7 +16,6 @@ export default function ModalAddJustify({open, setOpen}) {
   let options = []
   const ParlamenOption = parlamentares.filter(par => {
     if(par.ativo == true){
-      console.log()
       options.push(par.nome_parlamentar)
       return par.nome_parlamentar
     }
