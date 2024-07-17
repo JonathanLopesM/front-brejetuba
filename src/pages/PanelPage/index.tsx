@@ -49,7 +49,7 @@ export function Painel(){
               <div className='flex py-2 px-2 bg-white rounded-full '>
                 <img 
                   className="w-8 h-8 " 
-                  src="/Brasao_barra_Mansa.jpeg" 
+                  src="/Logo.jpeg" 
                   alt="" 
                   />
               </div>
