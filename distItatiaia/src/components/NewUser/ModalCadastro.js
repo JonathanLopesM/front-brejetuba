@@ -108,7 +108,7 @@ function ModalCadastro({ open, setOpen, }) {
                                                 react_3.default.createElement("input", { id: "id", name: "id", value: formParl, onChange: e => { setFormParl(e.target.value); setViewParOptions(true); }, className: "block sm:w-full lg:w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2.5" })),
                                             viewParOptions && formParl.length > 0 &&
                                                 react_3.default.createElement("div", { className: "absolute border py-2 h-28 bg-white w-full" },
-                                                    react_3.default.createElement("ul", { className: "flex flex-col overflow-auto h-24" }, filterNameParlm && filterNameParlm.map(par => (react_3.default.createElement("li", { onClick: () => {
+                                                    react_3.default.createElement("ul", { className: "flex flex-col overflow-auto h-24" }, filterNameParlm && filterNameParlm.map((par, index) => (react_3.default.createElement("li", { key: index, onClick: () => {
                                                             setFormIdParl(par.id);
                                                             setFormParl(par.__str__);
                                                             setViewParOptions(false);

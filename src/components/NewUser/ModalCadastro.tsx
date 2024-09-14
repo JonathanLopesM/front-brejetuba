@@ -141,8 +141,8 @@ export default function ModalCadastro({ open, setOpen, }) {
                                                 {viewParOptions && formParl.length > 0 &&
                                                     <div className="absolute border py-2 h-28 bg-white w-full">
                                                         <ul className="flex flex-col overflow-auto h-24">
-                                                            {filterNameParlm && filterNameParlm.map(par => (
-                                                                <li onClick={() => { 
+                                                            {filterNameParlm && filterNameParlm.map((par, index) => (
+                                                                <li key={index} onClick={() => { 
                                                                     setFormIdParl(par.id); 
                                                                     setFormParl(par.__str__); 
                                                                     setViewParOptions(false) 
