@@ -11,29 +11,15 @@ export function PainelParlamentares ({ dados, materia}) {
 
   },[])
   const partidos = [
-    { name: "CRISTINA MAGNO", partido: "PP" },
-    { name: "BRUNO OLIVEIRA", partido: "PRTB" },
-    { name: "CASÉ", partido: "UNIÃO" },
-    { name: "DANIEL MACIEL", partido: "PP" },
-    { name: "DECO", partido: "PSC" },
-    { name: "DR EDUARDO", partido: "PV" },
-    { name: "FURLANI", partido: "UNIÃO" },
-    { name: "GUSTAVO GOMES", partido: "REPUB" },
-    { name: "JOSÉ MARQUES", partido: "PSD" },
-    { name: "JOÃOZINHO DO AR", partido: "DC" },
-    { name: "LUCIANA ALVES", partido: "DC" },
-    { name: "MAMEDE", partido: "PSC" },
-    { name: "MARIA LÚCIA", partido: "PRTB" },
-    { name: "MARQUINHO", partido: "UNIÃO" },
-    { name: "PAOLA DA PIZZARIA", partido: "PSDB" },
-    { name: "PAULO GRÁFICA", partido: "UNIÃO" },
-    { name: "PAULO CHUCHU", partido: "UNIÃO" },
-    { name: "PAULO SANDRO", partido: "DC" },
-    { name: "PISSULA", partido: "PV" },
-    { name: "PROF. FERNANDA", partido: "PT" },
-    { name: "RAYANE BRAGA", partido: "UNIÃO" },
-    { name: "WAGUIM", partido: "UNIÃO" },
-    { name: "MARCELL CASTRO", partido: "CIDADANIA" }
+    { name: "Ademir Antônio Correa", partido: "MDB" },
+  { name: "Antonio Ferreira Brum Neto", partido: "Rep." },
+  { name: "Antônio Marcos Bonifácio de Souza", partido: "PP" },
+  { name: "Arli Jose Dela Costa", partido: "PRD" },
+  { name: "Delurdes da Costa Miranda", partido: "MDB" },
+  { name: "Denis Simões Dias", partido: "PP" },
+  { name: "Jairo Cunha", partido: "PRD" },
+  { name: "Leandro Santana da Silva", partido: "PP" },
+  { name: "Luciana Maria da Silva", partido: "PDT" }
   ];
 
 // Verificar os dados do retorno parar conferir se 
