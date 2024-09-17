@@ -81,6 +81,7 @@ function PainelParlamentares({ dados, materia }) {
                                 par.presenca ?
                                     react_1.default.createElement("span", { className: "text-green-400 font-bold" }, "Presente")
                                     : react_1.default.createElement("span", { className: "text-red-400 font-bold" }, "Ausente")))),
+                    dados?.registro,
                     dados?.registro ?
                         react_1.default.createElement("div", { className: `flex border-2 ${par.voto == "Sim" && "border-green-500"} ${par.voto == "Não" && "border-red-500"} w-[100px] items-center justify-center px-2 sm:text-xs lg:text-base` },
                             react_1.default.createElement("span", { className: `font-bold ${par.voto == "Sim" && "text-green-500"} ${par.voto == "Não" && "text-red-500"} w-[80px] text-center ` }, par.voto))

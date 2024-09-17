@@ -149,31 +149,31 @@ export function ResultVote({ setMatterState, sessionId, setProjectsView}) {
                     <option value={2}>
                       APROVADO POR MAIORIA SIMPLES
                     </option>
-                    <option value={3}>
+                    <option value={5}>
                       APROVADO POR UNANIMIDADE
                     </option>
-                    <option value={4}>
+                    <option value={6}>
                       REPROVADA
                     </option>
-                    <option value={5}>
+                    <option value={7}>
                       MATÉRIA LIDA
                     </option>
-                    <option value={6}>
+                    <option value={8}>
                       APROVADA EM 1º DISCUSSÃO
                     </option>
-                    <option value={7}>
+                    <option value={9}>
                       APROVADA EM 2º DISCUSSÃO
                     </option>
-                    <option value={8}>
+                    <option value={10}>
                       APROVADA EM REGIME DE URGÊNCIA ESPECIAL
                     </option>
-                    <option value={9}>
+                    <option value={11}>
                       APROVADA EM DISCUSSÃO ÚNICA
                     </option>
-                    <option value={10}>
+                    <option value={12}>
                       APROVADO POR 2/3
                     </option>
-                    <option value={11}>
+                    <option value={13}>
                       PEDIDO DE VISTA
                     </option>
                   </select>

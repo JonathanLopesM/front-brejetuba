@@ -79,6 +79,7 @@ export function PainelParlamentares ({ dados, materia}) {
                 </div>
               </div>
             </div>
+            {dados?.registro}
             {
               dados?.registro ? 
               <div className={`flex border-2 ${par.voto == "Sim" && "border-green-500"} ${par.voto == "Não" && "border-red-500"} w-[100px] items-center justify-center px-2 sm:text-xs lg:text-base`}>
