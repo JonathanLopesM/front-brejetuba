@@ -69,7 +69,7 @@ export function PartTimes() {
   ]);
 
   function handleRestartDisc() {
-    setTotalTimeInSeconds(2 * 60);
+    setTotalTimeInSeconds(5 * 60);
     partTimeInitBoolean = true;
     PatchSpeechParl(
       getIdSpeech,

@@ -52,7 +52,7 @@ export function SpeechTimes() {
   ]);
 
   function handleRestartDisc() {
-    setTotalTimeInSeconds(10 * 45);
+    setTotalTimeInSeconds(10 * 60);
     speechTimeInitBoolean = true;
     PatchSpeechParl(
       getIdSpeech,
