@@ -27,9 +27,9 @@ exports.PartTimes = void 0;
 const react_1 = __importStar(require("react"));
 const AuthProvider_1 = require("../../../contexts/AuthProvider");
 function PartTimes() {
-    const { SearchParlSpeech, parlSpeech, GetPainel, dados, PatchSpeechParl, GetIdSpeech, getIdSpeech, setGetIdSpeech } = (0, react_1.useContext)(AuthProvider_1.AuthContext);
+    const { SearchParlSpeech, parlSpeech, GetPainel, dados, PatchSpeechParl, GetIdSpeech, getIdSpeech, setGetIdSpeech, } = (0, react_1.useContext)(AuthProvider_1.AuthContext);
     const [timerOn, setTimerOn] = (0, react_1.useState)(false);
-    const [totalTimeInSeconds, setTotalTimeInSeconds] = (0, react_1.useState)(2 * 60); //dados?.data?.speechParl?.partTimeInit)
+    const [totalTimeInSeconds, setTotalTimeInSeconds] = (0, react_1.useState)(5 * 60); //dados?.data?.speechParl?.partTimeInit)
     const minutes = Math.floor(totalTimeInSeconds / 60);
     const seconds = totalTimeInSeconds % 60;
     let partTime;
@@ -62,7 +62,13 @@ function PartTimes() {
                 return () => clearInterval(interval);
             }
         }
-    }, [totalTimeInSeconds, timerOn, dados?.data?.speechParl?.partTime, dados?.data?.speechParl?.partTimeBoolean, dados?.data?.speechParl?.partTimeInitBoolean]);
+    }, [
+        totalTimeInSeconds,
+        timerOn,
+        dados?.data?.speechParl?.partTime,
+        dados?.data?.speechParl?.partTimeBoolean,
+        dados?.data?.speechParl?.partTimeInitBoolean,
+    ]);
     function handleRestartDisc() {
         setTotalTimeInSeconds(2 * 60);
         partTimeInitBoolean = true;
@@ -90,10 +96,7 @@ function PartTimes() {
                     ":",
                     react_1.default.createElement("span", null, seconds.toString().padStart(2, "0")))),
             react_1.default.createElement("div", { className: "flex gap-4" },
-                timerOn === false ?
-                    react_1.default.createElement("span", { onClick: handleInitTimerSpeech, className: "flex cursor-pointer border px-4 rounded bg-green-200 hover:bg-green-400" }, "iniciar")
-                    :
-                        react_1.default.createElement("span", { onClick: handleInitTimerSpeechNot, className: "flex cursor-pointer border px-4 rounded bg-green-200 hover:bg-green-400" }, "pausar"),
+                timerOn === false ? (react_1.default.createElement("span", { onClick: handleInitTimerSpeech, className: "flex cursor-pointer border px-4 rounded bg-green-200 hover:bg-green-400" }, "iniciar")) : (react_1.default.createElement("span", { onClick: handleInitTimerSpeechNot, className: "flex cursor-pointer border px-4 rounded bg-green-200 hover:bg-green-400" }, "pausar")),
                 react_1.default.createElement("span", { onClick: handleRestartDisc, className: "flex cursor-pointer border px-4 rounded bg-green-200 hover:bg-green-400" }, "reiniciar")))));
 }
 exports.PartTimes = PartTimes;

@@ -34,43 +34,42 @@ function PainelParlamentares({ dados, materia }) {
         }
     }, []);
     const partidos = [
-        { name: "Ademir Antônio Correa", partido: "MDB" },
-        { name: "Antonio Ferreira Brum Neto", partido: "Rep." },
-        { name: "Antônio Marcos Bonifácio de Souza", partido: "PP" },
-        { name: "Arli Jose Dela Costa", partido: "PRD" },
-        { name: "Delurdes da Costa Miranda", partido: "MDB" },
-        { name: "Denis Simões Dias", partido: "PP" },
         { name: "Jairo Cunha", partido: "PRD" },
-        { name: "Leandro Santana da Silva", partido: "PP" },
-        { name: "Luciana Maria da Silva", partido: "PDT" }
+        { name: "Luciana Maria da Silva", partido: "PDT" },
+        { name: "Ademir Antônio Correa", partido: "MDB" },
+        { name: "Everton", partido: "PDT" },
+        { name: "Josafa", partido: "PL" },
+        { name: "Maxuel", partido: "PP" },
+        { name: "Rone", partido: "PSDB" },
+        { name: "Luzinete", partido: "REP" },
+        { name: "Beto", partido: "PL" },
     ];
-    // Verificar os dados do retorno parar conferir se 
+    // Verificar os dados do retorno parar conferir se
     // visualizar o voto do parl na tela do paine
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        materia &&
-            react_1.default.createElement("div", { className: " sm:flex text-center justify-center items-center lg:gap-2 sm:px-8" },
-                react_1.default.createElement("h4", { className: "text-xs lg:text-base xl:text-xl font-extrabold" }, materia.__str__),
-                "-",
-                react_1.default.createElement("h4", { className: " text-xs  xl:text-xl font-extrabold" }, materia.ementa)),
-        dados &&
-            react_1.default.createElement("div", { className: "flex flex-col w-full min-h-[600px] lg:min-h-full sm:max-h-screen justify-center items-center mt-5" },
-                react_1.default.createElement("div", { className: "grid  sm:grid-cols-3 gap-4 px-2 lg:w-[80%]" }, dados.stateVote.map((par, index) => (react_1.default.createElement("div", { key: par.id, className: "flex gap-4 justify-between border rounded-l-[48px]" },
-                    react_1.default.createElement("div", { className: "flex gap-2 items-center " },
-                        react_1.default.createElement("div", { className: "flex bg-white w-12 h-12 lg:w-12 lg:h-12 xl:w-16  xl:h-16 object-cover overflow-hidden rounded-full justify-center" },
-                            react_1.default.createElement("img", { className: "flex object-contain ", src: par.fotografia, alt: `foto do parlamentar ${par.name}` })),
-                        react_1.default.createElement("div", { className: "flex flex-col justify-center sm:text-xs lg:text-lg" },
-                            react_1.default.createElement("h2", { className: "flex sm:text-[8px] lg:text-base font-semibold" }, par.name),
-                            react_1.default.createElement("div", { className: "flex gap-2" },
-                                react_1.default.createElement("span", null,
-                                    partidos[index]?.partido ? partidos[index]?.partido : '',
-                                    " |"),
-                                par.presenca ?
-                                    react_1.default.createElement("span", { className: "text-green-400 font-bold" }, "Presente")
-                                    : react_1.default.createElement("span", { className: "text-red-400 font-bold" }, "Ausente")))),
-                    dados?.registro,
-                    dados?.registro ?
-                        react_1.default.createElement("div", { className: `flex border-2 ${par.voto == "Sim" && "border-green-500"} ${par.voto == "Não" && "border-red-500"} w-[100px] items-center justify-center px-2 sm:text-xs lg:text-base` },
-                            react_1.default.createElement("span", { className: `font-bold ${par.voto == "Sim" && "text-green-500"} ${par.voto == "Não" && "text-red-500"} w-[80px] text-center ` }, par.voto))
-                        : react_1.default.createElement("div", { className: `flex border w-[20px] lg:w-20 xl:w-[100px] items-center justify-center px-2 ${par?.voto?.toLowerCase() !== "não votou" ? "bg-yellow-300" : "bg-white"}` }))))))));
+        materia && (react_1.default.createElement("div", { className: " sm:flex text-center justify-center items-center lg:gap-2 sm:px-8" },
+            react_1.default.createElement("h4", { className: "text-xs lg:text-base xl:text-xl font-extrabold" }, materia.__str__),
+            "-",
+            react_1.default.createElement("h4", { className: " text-xs  xl:text-xl font-extrabold" }, materia.ementa))),
+        dados && (react_1.default.createElement("div", { className: "flex flex-col w-full min-h-[600px] lg:min-h-full sm:max-h-screen justify-center items-center mt-5" },
+            react_1.default.createElement("div", { className: "grid  sm:grid-cols-3 gap-4 px-2 lg:w-[80%]" }, dados.stateVote.map((par, index) => (react_1.default.createElement("div", { key: par.id, className: "flex gap-4 justify-between border rounded-l-[48px]" },
+                react_1.default.createElement("div", { className: "flex gap-2 items-center " },
+                    react_1.default.createElement("div", { className: "flex bg-white w-12 h-12 lg:w-12 lg:h-12 xl:w-16  xl:h-16 object-cover overflow-hidden rounded-full justify-center" },
+                        react_1.default.createElement("img", { className: "flex object-contain ", src: par.fotografia, alt: `foto do parlamentar ${par.name}` })),
+                    react_1.default.createElement("div", { className: "flex flex-col justify-center sm:text-xs lg:text-lg" },
+                        react_1.default.createElement("h2", { className: "flex sm:text-[8px] lg:text-base font-semibold" }, par.name),
+                        react_1.default.createElement("div", { className: "flex gap-2" },
+                            react_1.default.createElement("span", null,
+                                partidos[index]?.partido
+                                    ? partidos[index]?.partido
+                                    : "",
+                                " ",
+                                "|"),
+                            par.presenca ? (react_1.default.createElement("span", { className: "text-green-400 font-bold" }, "Presente")) : (react_1.default.createElement("span", { className: "text-red-400 font-bold" }, "Ausente"))))),
+                dados?.registro,
+                dados?.registro ? (react_1.default.createElement("div", { className: `flex border-2 ${par.voto == "Sim" && "border-green-500"} ${par.voto == "Não" && "border-red-500"} w-[100px] items-center justify-center px-2 sm:text-xs lg:text-base` },
+                    react_1.default.createElement("span", { className: `font-bold ${par.voto == "Sim" && "text-green-500"} ${par.voto == "Não" && "text-red-500"} w-[80px] text-center ` }, par.voto))) : (react_1.default.createElement("div", { className: `flex border w-[20px] lg:w-20 xl:w-[100px] items-center justify-center px-2 ${par?.voto?.toLowerCase() !== "não votou"
+                        ? "bg-yellow-300"
+                        : "bg-white"}` }))))))))));
 }
 exports.PainelParlamentares = PainelParlamentares;
